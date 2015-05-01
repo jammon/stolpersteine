@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="jumbotron">
+  <div class="container">
+    <h1>Es tut uns leid!</h1>
+    <p>Die Seite <b id="url"></b> ist auf diesem Server nicht zu finden.</p>
+  </div>
+</div>
+{% endblock body %}
+
+{% block scripts %}
+  <script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+
+      // Add the missing url to the text
+      $("#url").text(window.location.pathname);
+
+      // Fix the css locations dynamically
+      $("head link").each(function() {
+        for (var i=0; i<window.location.pathname.split(/\//g).length-2; i++)
+          $(this).attr("href", "../" + $(this).attr("href"));
+      });
+    })
+  </script>
+{% endblock %}

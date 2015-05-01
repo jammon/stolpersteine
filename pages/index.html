@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="jumbotron">
+  <div class="container">
+    <h1>Stolpersteine in Kempen</h1>
+    <p>Ein Projekt der Erinnerung</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+
+<div class="panel-group" id="accordion" role="tablist" 
+     aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="tabProjekt">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" 
+           href="#collapseProjekt" aria-expanded="true" 
+           aria-controls="collapseProjekt">
+          Projekt
+        </a>
+      </h4>
+    </div>
+    <div id="collapseProjekt" class="panel-collapse collapse in" 
+         role="tabpanel" aria-labelledby="tabProjekt">
+      <div class="panel-body">
+        <ul>
+          <li>Stolpersteine allgemein</li>
+          <li>Stolpersteine in Kempen</li>
+          <li>Geschichte des Gedenkens</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="tabBiographien">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" 
+           href="#collapseBiographien" aria-expanded="false" 
+           aria-controls="collapseBiographien">
+          Biographien
+        </a>
+      </h4>
+    </div>
+    <div id="collapseBiographien" class="panel-collapse collapse" 
+         role="tabpanel" aria-labelledby="tabBiographien">
+      <div class="panel-body">
+        <a href="/biographien.html">Viele Menschen wurden gequält, verschleppt und umgebracht in der Nazizeit. 
+        Wir erinnern hier an die Opfer in unserer Heimatstadt.</a>
+        <ul>
+          <li>Holocaust-Opfer</li>
+          <li>Euthanasie-Opfer</li>
+          <li>Kriegsgefangene</li>
+          <li>Politisch Verfolgte</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="tabAktuelles">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" 
+           href="#collapseAktuelles" aria-expanded="false" 
+           aria-controls="collapseAktuelles">
+          Aktuelles
+        </a>
+      </h4>
+    </div>
+    <div id="collapseAktuelles" class="panel-collapse collapse" 
+         role="tabpanel" aria-labelledby="tabAktuelles">
+      <div class="panel-body">
+        Neue Nachrichten von Stolpersteinen
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container">
+    <a href="/impressum">Impressum</a>
+  </div>
+</nav>
+{% endblock %}
